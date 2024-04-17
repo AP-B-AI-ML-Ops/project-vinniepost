@@ -4,5 +4,5 @@
 
 [Guide](https://ravi-chan.medium.com/how-to-download-any-data-set-from-kaggle-7e2adc152d7f)
 
-In the dataset are a number of features and wether or not they died of heart failure. Given these features I'd like to predict wether or not someone will have heart failures
+In the dataset are a number of features and whether or not they died of heart failure. Given these features I'd like to predict whether or not someone will have heart failures
 

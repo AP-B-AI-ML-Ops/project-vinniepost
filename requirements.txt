@@ -1,0 +1,7 @@
+mlflow
+prefect
+ipykernel
+tensorflow
+opendatasets
+kaggle
+zipfile
