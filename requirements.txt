@@ -4,7 +4,7 @@ ipykernel
 tensorflow
 opendatasets
 kaggle
-zipfile
+
 tqdm
 requests
 joblib
