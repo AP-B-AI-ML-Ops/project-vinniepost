@@ -7,8 +7,8 @@ import mlflow
 
 import time
 
-name_of_dataset = 'andrewmvd/heart-failure-clinical-data'
-data_path = '../data'
+NAME_OF_SET = 'andrewmvd/heart-failure-clinical-data'
+DATA_PATH = '../data'
 
 @flow
 def main_flow():
@@ -17,8 +17,8 @@ def main_flow():
     today = time.strftime("%Y-%m-%d-")
     mlflow.set_experiment(f'heart_failure_{today}')
     
-    data = collect_flow(name_of_dataset, data_path)
-    hist = train_model_flow(data)
+    data = collect_flow(NAME_OF_SET, DATA_PATH)
+    model = train_model_flow(data)
     
     
 if __name__ == '__main__':
