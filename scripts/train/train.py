@@ -103,19 +103,21 @@ def evaluate_model(X_test, y_test, model):
 
     return classification_report(y_test, y_pred)
 
+
 @flow
 def train_model_flow(data):
     """
     function to train the model
     """
-    X_train, X_test, y_train, y_test = prepare_data(data)
-    model, early_stopping = initialise_model()
-    history = train_model(X_train, y_train, model, early_stopping)
-    
-    classification = evaluate_model(X_test, y_test, model)
-    
-    val_accuracy = np.mean(history.history['val_accuracy'])
-    print(classification)
-    print("\n%s: %.2f%%" % ('val_accuracy', val_accuracy*100))
-    
+    with mlflow.start_run():
+        X_train, X_test, y_train, y_test = prepare_data(data)
+        model, early_stopping = initialise_model()
+        history = train_model(X_train, y_train, model, early_stopping)
+
+        classification = evaluate_model(X_test, y_test, model)
+
+        val_accuracy = np.mean(history.history['val_accuracy'])
+        print(classification)
+        print("\n%s: %.2f%%" % ('val_accuracy', val_accuracy*100))
+
     return history
