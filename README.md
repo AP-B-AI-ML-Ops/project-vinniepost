@@ -50,4 +50,8 @@ You can run the main flow by running the main.py found in the Scripts subfolder.
 python Scripts/main.py
 ```
 
+
+## Comment
+In the scripts folder is a subfolder called deprecated. These scripts where my original project that I abandond in hopes of getting a better grade with the current setup.
+
 ### Todo: Discribe how to setup a worker

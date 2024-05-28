@@ -4,7 +4,7 @@ if [ -f "requirements.txt" ]; then
   pip install -r requirements.txt
 fi
 
-mlflow ui --backend-store-uri sqlite:///mlflow.db&
+mlflow ui --backend-store-uri sqlite:///scripts/mlflow.db&
 
 prefect server start&
 
