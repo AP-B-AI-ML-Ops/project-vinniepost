@@ -1,4 +1,11 @@
 [tool.pylint.messages_control]
 disable = [
     "W0718",
+    "E0401",
+    "C0114",
+    "C0116",
+    "E0611",
+    "C0103",
+    "W1203",
+    "W0621",
 ]
